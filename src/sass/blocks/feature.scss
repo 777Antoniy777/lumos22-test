@@ -1,0 +1,43 @@
+.feature {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: $gold1;
+  background-image: url("../img/feature-bg.jpg");
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  @media (min-width: $media-dt) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  h2 {
+    @include visually-hidden;
+  }
+
+  p {
+    padding-bottom: 40px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 361px;
+    min-height: 60px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $w;
+    background-color: $red1;
+    border-radius: 35px;
+  }
+}
