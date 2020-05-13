@@ -9,7 +9,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var cssmin = require("gulp-csso");
 var rename = require("gulp-rename");
-var image = require("gulp-image");
+// var image = require("gulp-image");
 var webp = require("gulp-webp");
 var objectfit = require(`postcss-object-fit-images`);
 var webpack = require('webpack-stream');
@@ -119,7 +119,7 @@ gulp.task("server", function() {
   gulp.watch("src/img/icons-sprite/*.svg", gulp.series("sprite", "reload"));
   gulp.watch("src/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("src/js/*/**.js", gulp.series("js"));
-  gulp.watch("src/*.html", gulp.series("html", "reload"));
+  gulp.watch("src/**/*.html", gulp.series("html", "reload"));
 });
 
 gulp.task("reload", function(done) {

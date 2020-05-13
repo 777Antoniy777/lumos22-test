@@ -11,40 +11,30 @@ html {
 }
 
 body {
-  min-width: 320px;
+  min-width: $media-mb;
   margin: 0;
   padding: 0;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  font-family: $montserrat-medium;
+  font-size: 24px;
+  line-height: 29px;
+  font-family: $lato;
   color: $b;
   overflow-x: hidden;
-
-  @media (min-width: $media-tb) {
-    font-size: 14px;
-    line-height: 18px;
-  }
-
-  @media (min-width: $media-dt) {
-    font-size: 16px;
-    line-height: 20px;
-  }
 }
 
 .site-wrapper {
-  width: 304px * 100% / 320px;
-  max-width: 1440px;
-  margin-right: auto;
-  margin-left: auto;
+  // width: 304px * 100% / 320px;
+  // max-width: 1440px;
+  // margin-right: auto;
+  // margin-left: auto;
 
-  @media (min-width: $media-tb) {
-    width: 952px * 100% / 1024px;
-  }
+  // @media (min-width: $media-tb) {
+  //   width: 952px * 100% / 1024px;
+  // }
 
-  @media (min-width: $media-dt) {
-    width: 1280px * 100% / 1440px;
-  }
+  // @media (min-width: $media-dt) {
+  //   width: 1280px * 100% / 1440px;
+  // }
 }
 
 a {

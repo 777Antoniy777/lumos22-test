@@ -1,0 +1,14 @@
+.nav {
+  margin-bottom: 30px;
+
+  &__logo,
+  &__logo-image {
+    width: 63px;
+    height: 67px;
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+  }
+}

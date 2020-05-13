@@ -1,0 +1,85 @@
+.intro {
+  min-height: 480px;
+  padding-top: 290px;
+  padding-bottom: 92px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 600;
+  text-align: center;
+  color: $grey1;
+  background-image: url("../img/intro-bg.jpg");
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-color: $b;
+
+  h1,
+  p {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    padding-bottom: 15px;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 800;
+    color: $gold1;
+  }
+
+  &__description {
+    padding-bottom: 50px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      width: 262px;
+      height: 50px;
+      margin-bottom: 15px;
+      padding: 5px 20px;
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $b;
+      background-color: #faf9f9;
+      border: 1px solid #583f3f;
+      border-radius: 35px;
+
+      &::placeholder {
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: 300;
+        color: $b;
+      }
+    }
+
+    p {
+      order: 1;
+      width: 246px;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 300;
+      color: $pink1;
+    }
+
+    button {
+      width: 264px;
+      min-height: 50px;
+      margin-bottom: 13px;
+      padding: 5px 10px;
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $w;
+      background-color: $red1;
+      border: none;
+      border-radius: 35px;
+    }
+  }
+}
