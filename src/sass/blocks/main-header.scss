@@ -9,12 +9,15 @@
   color: $grey1;
 
   &__wrapper h2 {
-    width: 320px;
     margin: 0 auto;
     padding-bottom: 15px;
     font-size: 18px;
     line-height: 22px;
     font-weight: 600;
     text-transform: uppercase;
+
+    @media (min-width: $media-dt) {
+      // width: 320px;
+    }
   }
 }

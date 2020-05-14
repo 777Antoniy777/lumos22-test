@@ -1,7 +1,7 @@
 .intro {
   min-height: 480px;
   padding-top: 290px;
-  padding-bottom: 92px;
+  padding-bottom: 60px;
   font-size: 24px;
   line-height: 29px;
   font-weight: 600;
@@ -13,9 +13,13 @@
   background-repeat: no-repeat;
   background-color: $b;
 
+  @media (min-width: $media-dt) {
+    padding-bottom: 92px;
+  }
+
   h1,
   p {
-    width: 320px;
+    // width: 320px;
     margin: 0 auto;
   }
 
@@ -37,7 +41,7 @@
     align-items: center;
 
     input {
-      width: 262px;
+      width: 80%;
       height: 50px;
       margin-bottom: 15px;
       padding: 5px 20px;
@@ -56,20 +60,28 @@
         font-weight: 300;
         color: $b;
       }
+
+      @media (min-width: $media-dt) {
+        width: 262px;
+      }
     }
 
     p {
       order: 1;
-      width: 246px;
+      width: 70%;
       font-size: 12px;
       line-height: 14px;
       font-weight: 300;
       font-style: italic;
       color: $pink1;
+
+      @media (min-width: $media-dt) {
+        width: 246px;
+      }
     }
 
     button {
-      width: 264px;
+      width: 80%;
       min-height: 50px;
       margin-bottom: 13px;
       padding: 5px 10px;
@@ -81,6 +93,10 @@
       background-color: $red1;
       border: none;
       border-radius: 35px;
+
+      @media (min-width: $media-dt) {
+        width: 264px;
+      }
     }
   }
 }
