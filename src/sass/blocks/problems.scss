@@ -13,10 +13,15 @@
     width: 555px;
     margin: 0 auto;
     padding-bottom: 60px;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 28px;
     font-weight: 700;
     text-transform: uppercase;
+
+    @media (min-width: $media-dt) {
+      font-size: 30px;
+      line-height: 36px;
+    }
   }
 
   &__list {

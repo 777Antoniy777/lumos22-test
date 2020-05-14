@@ -1,0 +1,129 @@
+.reviews {
+  padding-top: 60px;
+  padding-bottom: 125px;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $media-dt) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: $media-dt) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 946px;
+    margin: 0 auto 60px;
+    padding: 30px 0;
+    background: $w;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 28px;
+      width: 40px;
+      height: 40px;
+      background-image: url("../img/sprite/sprite.svg#quotations");
+      background-size: 32px 32px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-color: $violet2;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__user-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 20px 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 262px;
+      height: 1px;
+      background: $violet2;
+    }
+  }
+
+  &__user-inner-wrapper {
+    font-weight: 700;
+
+    span {
+      display: block;
+      padding-bottom: 15px;
+      font-size: 12px;
+      line-height: 16px;
+
+      @media (min-width: $media-dt) {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 18px;
+      font-style: italic;
+      text-transform: uppercase;
+
+      @media (min-width: $media-dt) {
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  &__user-image {
+    margin-right: 20px;
+  }
+
+  &__description-wrapper {
+    padding: 30px 30px 0;
+
+    p {
+      padding-bottom: 20px;
+    }
+
+    span {
+      font-weight: 700;
+      color: $violet1;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 361px;
+    min-height: 60px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $w;
+    background-color: $red1;
+    border-radius: 35px;
+  }
+}
