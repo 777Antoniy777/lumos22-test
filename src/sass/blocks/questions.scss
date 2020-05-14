@@ -47,7 +47,12 @@
     padding-bottom: 40px;
 
     span {
+      font-size: 15px;
       font-weight: 700;
+
+      @media (min-width: $media-dt) {
+        font-size: 18px;
+      }
     }
   }
 

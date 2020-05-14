@@ -1,0 +1,44 @@
+.author {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+
+  &__list {
+    @include reset-list;
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  li {
+    margin-bottom: 30px;
+    text-align: left;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .author__item-span {
+    text-transform: uppercase;
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__image {
+    order: -1;
+    margin: 0 auto 40px;
+  }
+}
