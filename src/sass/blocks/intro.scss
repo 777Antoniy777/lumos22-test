@@ -14,6 +14,7 @@
   background-color: $b;
 
   @media (min-width: $media-dt) {
+    padding-top: 194px;
     padding-bottom: 92px;
   }
 
@@ -21,6 +22,10 @@
   p {
     // width: 320px;
     margin: 0 auto;
+
+    @media (min-width: $media-dt) {
+      width: 750px;
+    }
   }
 
   &__title {
@@ -28,11 +33,21 @@
     font-size: 40px;
     line-height: 48px;
     font-weight: 800;
+    text-transform: uppercase;
     color: $gold1;
+
+    @media (min-width: $media-dt) {
+      font-size: 60px;
+      line-height: 72px;
+    }
   }
 
   &__description {
     padding-bottom: 50px;
+
+    @media (min-width: $media-dt) {
+      padding-bottom: 66px;
+    }
   }
 
   &__form {
@@ -40,9 +55,14 @@
     flex-direction: column;
     align-items: center;
 
+    @media (min-width: $media-dt) {
+      flex-direction: row;
+    }
+
     input {
       width: 80%;
       height: 50px;
+      // margin-right: 30px;
       margin-bottom: 15px;
       padding: 5px 20px;
       font-size: 15px;
