@@ -23,10 +23,6 @@
   h1,
   p {
     margin: 0 auto;
-
-    @media (min-width: $media-dt) {
-      // width: 750px;
-    }
   }
 
   &__title {

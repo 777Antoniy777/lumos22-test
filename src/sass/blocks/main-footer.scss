@@ -7,6 +7,7 @@
   font-weight: 700;
   text-align: center;
   color: $w;
+  background-color: $b;
   background-image: url("../img/footer-bg.jpg");
   background-size: cover;
   background-position: 0 0;
@@ -25,12 +26,21 @@
     &--first {
       margin-bottom: 60px;
 
+      @media (min-width: $media-dt) {
+        margin-bottom: 0;
+        text-align: left;
+      }
+
       p {
         padding-bottom: 10px;
       }
     }
 
     &--second {
+      @media (min-width: $media-dt) {
+        text-align: right;
+      }
+
       p {
         padding-bottom: 30px;
 
@@ -51,7 +61,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 243px;
+    min-width: 245px;
+    width: 50%;
     min-height: 47px;
     margin: 0 auto;
     font-size: 14px;
@@ -60,6 +71,12 @@
     text-transform: uppercase;
     background-color: $red2;
     border-radius: 10px;
+
+    @media (min-width: $media-dt) {
+      margin: 0;
+      min-width: unset;
+      width: 243px;
+    }
   }
 
   &__inner-wrapper {
