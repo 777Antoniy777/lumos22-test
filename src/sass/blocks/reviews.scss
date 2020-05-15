@@ -28,8 +28,12 @@
 
   &__slider-wrapper {
     position: relative;
+    margin: 0 auto 60px;
+    padding: 25px 0 6px;
+    background: $w;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
 
-    ::before {
+    &::before {
       content: "";
       position: absolute;
       top: 10px;
@@ -44,29 +48,6 @@
       background-color: $violet2;
       transform: translateY(-50%);
     }
-  }
-
-  &__wrapper {
-    // position: relative;
-    margin: 0 auto 60px;
-    padding: 25px 0 6px;
-    background: $w;
-    // box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   top: 10px;
-    //   right: 16px;
-    //   width: 40px;
-    //   height: 40px;
-    //   background-image: url("../img/svg/quotations.svg");
-    //   background-size: 32px 32px;
-    //   background-position: 50% 50%;
-    //   background-repeat: no-repeat;
-    //   background-color: $violet2;
-    //   transform: translateY(-50%);
-    // }
   }
 
   &__user-wrapper {
@@ -150,24 +131,4 @@
     background-color: $red1;
     border-radius: 35px;
   }
-}
-
-.tns-ovh {
-  // position: relative;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 10px;
-  //   right: 16px;
-  //   width: 40px;
-  //   height: 40px;
-  //   background-image: url("../img/svg/quotations.svg");
-  //   background-size: 32px 32px;
-  //   background-position: 50% 50%;
-  //   background-repeat: no-repeat;
-  //   background-color: $violet2;
-  //   transform: translateY(-50%);
-  // }
 }
