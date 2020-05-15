@@ -8,9 +8,13 @@
   text-align: center;
   color: $grey1;
 
+  @media (min-width: $media-dt) {
+    padding-top: 8px;
+  }
+
   &__wrapper {
     @media (min-width: $media-dt) {
-      padding-top: 35px;
+      padding-top: 67px;
     }
   }
 
@@ -26,8 +30,4 @@
       // width: 320px;
     }
   }
-}
-
-.row .col {
-  background-color: red;
 }

@@ -22,13 +22,20 @@
 
   &__description {
     padding-bottom: 40px;
+
+    br {
+      display: none;
+
+      @media (min-width: $media-dt) {
+        display: block;
+      }
+    }
   }
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 361px;
     min-height: 60px;
     margin: 0 auto;
     padding: 5px 10px;
