@@ -30,6 +30,7 @@
     text-transform: uppercase;
 
     @media (min-width: $media-dt) {
+      margin: 0 auto;
       font-size: 30px;
       line-height: 36px;
     }
@@ -39,12 +40,24 @@
     }
   }
 
-  img {
+  .questions__image {
     margin: 0 auto 40px;
+
+    @media (min-width: $media-dt) {
+      margin-top: 12px;
+    }
+
+    &--border {
+      border-bottom: 1px solid $gold1;
+    }
   }
 
   p {
     padding-bottom: 40px;
+
+    @media (min-width: $media-dt) {
+      text-align: left;
+    }
 
     span {
       font-size: 15px;
@@ -56,6 +69,20 @@
     }
   }
 
+  &__inner-wrapper {
+    &--second {
+      @media (min-width: $media-dt) {
+        flex-direction: row-reverse;
+      }
+
+      p {
+        @media (min-width: $media-dt) {
+          text-align: right;
+        }
+      }
+    }
+  }
+
   &__description-wrapper {
     p {
       &:last-child {
@@ -63,4 +90,9 @@
       }
     }
   }
+}
+
+.col-1 {
+  height: 50px;
+  border: 1px solid blue;
 }
