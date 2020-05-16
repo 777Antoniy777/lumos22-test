@@ -1,0 +1,33 @@
+.main-header {
+  position: absolute;
+  width: 100%;
+  padding-top: 42px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: $grey1;
+
+  @media (min-width: $media-dt) {
+    padding-top: 40px;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+
+    @media (min-width: $media-dt) {
+      margin: unset;
+      margin-left: 8.333333%;
+      padding-top: 35px;
+    }
+  }
+
+  &__wrapper h2 {
+    margin: 0 auto;
+    padding-bottom: 15px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}

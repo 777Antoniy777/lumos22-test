@@ -1,0 +1,28 @@
+.nav {
+  margin-bottom: 30px;
+
+  @media (min-width: $media-dt) {
+    margin-bottom: 0;
+  }
+
+  &__logo,
+  &__logo-image {
+    width: 63px;
+    height: 67px;
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+
+    @media (min-width: $media-dt) {
+      height: unset;
+    }
+  }
+
+  &__logo-image {
+    width: 63px;
+    height: 67px;
+    object-fit: cover;
+  }
+}

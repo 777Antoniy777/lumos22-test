@@ -1,0 +1,93 @@
+.problems {
+  padding-top: 50px;
+  padding-bottom: 42px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  background-color: $white1;
+
+  @media (min-width: $media-dt) {
+    margin-top: -156px;
+    padding-top: 153px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  h2 {
+    margin: 0 auto;
+    padding-bottom: 60px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media (min-width: $media-dt) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__list {
+    @include reset-list;
+    margin-bottom: 50px;
+
+    @media (min-width: $media-dt) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__item {
+    &:last-child span {
+      margin-bottom: 0;
+
+      @media (min-width: $media-dt) {
+        margin-bottom: 38px;
+      }
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      width: 90%;
+      margin: 0 auto 38px;
+      padding-top: 15px;
+      border-top: 1px solid $gold1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        background-color: $gold1;
+        border-radius: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $w;
+    background-color: $red1;
+    border-radius: 35px;
+  }
+}
+
+// IE fix styles
+@media screen {@media (min-width: 0) {
+  _:-ms-input-placeholder, :root .problems__link {
+    padding-top: 20px;
+  }
+}}

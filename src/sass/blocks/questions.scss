@@ -1,0 +1,150 @@
+.questions {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+
+  @media (min-width: $media-dt) {
+    padding-bottom: 0;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  h2 {
+    @include visually-hidden;
+  }
+
+  &__wrapper {
+    margin-bottom: 100px;
+
+    @media (min-width: $media-dt) {
+      margin-bottom: 98px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    padding-bottom: 50px;
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media (min-width: $media-dt) {
+      margin: 0 auto;
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    span {
+      color: $gold1;
+    }
+  }
+
+  .questions__image {
+    margin: 0 auto 40px;
+
+    @media (min-width: $media-dt) {
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+
+    &--border {
+      border-bottom: 1px solid $gold1;
+
+      @media (min-width: $media-dt) {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &__description {
+    padding-bottom: 40px;
+
+    @media (min-width: $media-dt) {
+      text-align: left;
+    }
+
+    &--triangle-left,
+    &--triangle-right {
+      position: relative;
+
+      @media (min-width: $media-dt) {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 80px;
+          height: 150px;
+          background-image: url("../img/sprite/sprite.svg#triangle");
+          background-position: 0 0;
+          background-repeat: no-repeat;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    &--triangle-left {
+      @media (min-width: $media-dt) {
+        padding-left: 28px;
+
+        &::before {
+          top: 41%;
+          left: -28px;
+        }
+      }
+    }
+
+    &--triangle-right {
+      @media (min-width: $media-dt) {
+        padding-right: 28px;
+
+        &::before {
+          top: 41%;
+          right: -28px;
+          transform: translateY(-50%) scale(-1, 1);
+        }
+      }
+    }
+
+    span {
+      font-size: 15px;
+      font-weight: 700;
+
+      @media (min-width: $media-dt) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__description-wrapper {
+    p {
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__inner-wrapper {
+    &--second {
+      .questions__description-wrapper {
+        @media (min-width: $media-dt) {
+          order: -1;
+        }
+      }
+
+      p {
+        @media (min-width: $media-dt) {
+          text-align: right;
+        }
+
+        &:last-child {
+          padding-bottom: 40px;
+        }
+      }
+    }
+  }
+}

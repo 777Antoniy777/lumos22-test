@@ -1,0 +1,166 @@
+.reviews {
+  margin-top: -85px;
+  padding-top: 102px;
+  padding-bottom: 125px;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: $pink2;
+
+  @media (min-width: $media-dt) {
+    padding-top: 102px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__title {
+    padding-bottom: 50px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: $media-dt) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__slider-wrapper {
+    position: relative;
+    margin: 0 auto 60px;
+    padding: 25px 0 6px;
+    background: $w;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 16px;
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      background-image: url("../img/svg/quotations.svg");
+      background-size: 32px 32px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-color: $violet2;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__user-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 20px 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 262px;
+      height: 1px;
+      background: $violet2;
+    }
+  }
+
+  &__user-inner-wrapper {
+    padding-top: 6px;
+    font-weight: 700;
+
+    span {
+      display: block;
+      padding-bottom: 15px;
+      font-size: 12px;
+      line-height: 16px;
+
+      @media (min-width: $media-dt) {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 18px;
+      font-style: italic;
+      text-transform: uppercase;
+
+      @media (min-width: $media-dt) {
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  &__user-image {
+    margin-right: 20px;
+    object-fit: contain;
+  }
+
+  &__description-wrapper {
+    padding: 30px 26px 0;
+
+    p {
+      padding-bottom: 20px;
+    }
+
+    span {
+      font-weight: 700;
+      color: $violet3;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $w;
+    background-color: $red1;
+    border-radius: 35px;
+  }
+}
+
+// IE fixed styles
+_:-ms-fullscreen, :root .reviews__user-image {
+  min-width: 58px;
+  height: 55px;
+}
+
+_:-ms-input-placeholder, :root .reviews__link {
+  padding-top: 20px;
+}
+
+_:-ms-fullscreen, :root .reviews {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 0) {
+  _:-ms-fullscreen, :root .reviews__slider-wrapper {
+    margin-right: auto;
+    margin-left: -10px;
+    overflow: hidden;
+  }
+}
+
+_:-ms-fullscreen, :root .reviews__slider {
+  display: flex;
+  width: 800%;
+}
+
+_:-ms-fullscreen, :root .reviews__wrapper {
+  width: 100%;
+}

@@ -1,0 +1,143 @@
+.intro {
+  min-height: 480px;
+  padding-top: 290px;
+  padding-bottom: 91px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 600;
+  text-align: center;
+  color: $grey1;
+  background-image: url("../img/intro-bg.jpg");
+  background-size: cover;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-color: $b;
+
+  @media (min-width: $media-dt) {
+    min-height: 720px;
+    padding-top: 194px;
+    padding-bottom: 92px;
+    background-image: url("../img/intro-bg-dt.jpg");
+  }
+
+  h1,
+  p {
+    margin: 0 auto;
+  }
+
+  &__title {
+    padding-bottom: 15px;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $gold1;
+
+    @media (min-width: $media-dt) {
+      padding-bottom: 17px;
+      font-size: 60px;
+      line-height: 72px;
+    }
+  }
+
+  &__description {
+    padding: 0 10px 50px;
+
+    @media (min-width: $media-dt) {
+      padding: 0;
+      padding-bottom: 64px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $media-dt) {
+      flex-direction: row;
+    }
+
+    input {
+      width: 80%;
+      height: 50px;
+      margin-bottom: 15px;
+      padding: 5px 20px;
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $b;
+      background-color: #faf9f9;
+      border: 1px solid #583f3f;
+      border-radius: 35px;
+
+      &::placeholder {
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: 300;
+        color: $b;
+      }
+
+      @media (min-width: $media-480) {
+        width: 59%;
+      }
+
+      @media (min-width: $media-dt) {
+        width: 100%;
+      }
+    }
+
+    p {
+      order: 1;
+      width: 80%;
+      padding-right: 0;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 300;
+      font-style: italic;
+      text-align: left;
+      color: $pink1;
+
+      @media (min-width: $media-480) {
+        width: 54%;
+      }
+
+      @media (min-width: $media-dt) {
+        width: 246px;
+        padding-right: unset;
+        text-align: center;
+      }
+    }
+
+    button {
+      width: 80%;
+      min-height: 50px;
+      margin-bottom: 15px;
+      padding: 5px 10px;
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $w;
+      background-color: $red1;
+      border: none;
+      border-radius: 35px;
+      cursor: pointer;
+
+      @media (min-width: $media-480) {
+        width: 59%;
+      }
+
+      @media (min-width: $media-dt) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// FF fixed styles
+_::-moz-progress-bar, body:last-child .intro input {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

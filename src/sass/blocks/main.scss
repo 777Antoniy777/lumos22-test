@@ -1,0 +1,21 @@
+.main {
+  &__wrapper {
+    padding-top: 70px;
+  }
+
+  &__inner-wrapper {
+    margin-bottom: 70px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: $b;
+    background-color: $w;
+    border: 3px solid $gold1;
+    border-radius: 10px;
+
+    @media (min-width: $media-dt) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
