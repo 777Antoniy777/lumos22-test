@@ -132,3 +132,35 @@
     border-radius: 35px;
   }
 }
+
+// IE fixed styles
+_:-ms-fullscreen, :root .reviews__user-image {
+  min-width: 58px;
+  height: 55px;
+}
+
+_:-ms-input-placeholder, :root .reviews__link {
+  padding-top: 20px;
+}
+
+_:-ms-fullscreen, :root .reviews {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 0) {
+  _:-ms-fullscreen, :root .reviews__slider-wrapper {
+    margin-right: auto;
+    margin-left: -10px;
+    overflow: hidden;
+  }
+}
+
+_:-ms-fullscreen, :root .reviews__slider {
+  display: flex;
+  width: 800%;
+}
+
+_:-ms-fullscreen, :root .reviews__wrapper {
+  width: 100%;
+}

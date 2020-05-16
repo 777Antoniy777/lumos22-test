@@ -84,3 +84,10 @@
     border-radius: 35px;
   }
 }
+
+// IE fix styles
+@media screen {@media (min-width: 0) {
+  _:-ms-input-placeholder, :root .problems__link {
+    padding-top: 20px;
+  }
+}}

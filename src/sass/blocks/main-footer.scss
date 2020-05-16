@@ -94,3 +94,8 @@
     }
   }
 }
+
+// IE fixed styles
+_:-ms-fullscreen, :root .main-footer__call-link {
+  padding-top: 15px;
+}

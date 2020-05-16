@@ -123,6 +123,7 @@
       background-color: $red1;
       border: none;
       border-radius: 35px;
+      cursor: pointer;
 
       @media (min-width: $media-480) {
         width: 59%;
@@ -133,4 +134,10 @@
       }
     }
   }
+}
+
+// FF fixed styles
+_::-moz-progress-bar, body:last-child .intro input {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
