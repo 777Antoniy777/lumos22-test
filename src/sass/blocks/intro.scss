@@ -1,7 +1,7 @@
 .intro {
   min-height: 480px;
   padding-top: 290px;
-  padding-bottom: 60px;
+  padding-bottom: 91px;
   font-size: 24px;
   line-height: 29px;
   font-weight: 600;
@@ -9,7 +9,7 @@
   color: $grey1;
   background-image: url("../img/intro-bg.jpg");
   background-size: cover;
-  background-position: 0 0;
+  background-position: 50% 0;
   background-repeat: no-repeat;
   background-color: $b;
 
@@ -41,9 +41,10 @@
   }
 
   &__description {
-    padding-bottom: 50px;
+    padding: 0 10px 50px;
 
     @media (min-width: $media-dt) {
+      padding: 0;
       padding-bottom: 64px;
     }
   }
@@ -78,6 +79,10 @@
         color: $b;
       }
 
+      @media (min-width: $media-480) {
+        width: 59%;
+      }
+
       @media (min-width: $media-dt) {
         width: 100%;
       }
@@ -85,22 +90,30 @@
 
     p {
       order: 1;
-      width: 70%;
+      width: 80%;
+      padding-right: 0;
       font-size: 12px;
       line-height: 14px;
       font-weight: 300;
       font-style: italic;
+      text-align: left;
       color: $pink1;
+
+      @media (min-width: $media-480) {
+        width: 54%;
+      }
 
       @media (min-width: $media-dt) {
         width: 246px;
+        padding-right: unset;
+        text-align: center;
       }
     }
 
     button {
       width: 80%;
       min-height: 50px;
-      margin-bottom: 13px;
+      margin-bottom: 15px;
       padding: 5px 10px;
       font-size: 15px;
       line-height: 18px;
@@ -110,6 +123,10 @@
       background-color: $red1;
       border: none;
       border-radius: 35px;
+
+      @media (min-width: $media-480) {
+        width: 59%;
+      }
 
       @media (min-width: $media-dt) {
         width: 100%;

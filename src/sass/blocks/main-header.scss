@@ -1,7 +1,7 @@
 .main-header {
   position: absolute;
   width: 100%;
-  padding-top: 40px;
+  padding-top: 42px;
   font-size: 18px;
   line-height: 22px;
   font-weight: 600;
@@ -9,12 +9,16 @@
   color: $grey1;
 
   @media (min-width: $media-dt) {
-    padding-top: 8px;
+    padding-top: 40px;
   }
 
   &__wrapper {
+    margin: 0 auto;
+
     @media (min-width: $media-dt) {
-      padding-top: 67px;
+      margin: unset;
+      margin-left: 8.333333%;
+      padding-top: 35px;
     }
   }
 
@@ -25,9 +29,5 @@
     line-height: 22px;
     font-weight: 600;
     text-transform: uppercase;
-
-    @media (min-width: $media-dt) {
-      // width: 320px;
-    }
   }
 }
