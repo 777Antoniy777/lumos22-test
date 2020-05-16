@@ -6,6 +6,7 @@
   font-weight: 700;
   text-align: center;
   color: $gold1;
+  background-color: $b;
   background-image: url("../img/feature-bg.jpg");
   background-size: cover;
   background-position: 0 0;
@@ -22,13 +23,20 @@
 
   &__description {
     padding-bottom: 40px;
+
+    br {
+      display: none;
+
+      @media (min-width: $media-dt) {
+        display: block;
+      }
+    }
   }
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 361px;
     min-height: 60px;
     margin: 0 auto;
     padding: 5px 10px;
@@ -41,3 +49,10 @@
     border-radius: 35px;
   }
 }
+
+// IE fix styles
+@media screen {@media (min-width: 0px) {
+  _:-ms-input-placeholder, :root .feature__link {
+    padding-top: 20px;
+  }
+}}

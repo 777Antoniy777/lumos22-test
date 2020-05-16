@@ -1,11 +1,15 @@
 .main {
+  &__wrapper {
+    padding-top: 70px;
+  }
+
   &__inner-wrapper {
-    width: 752px;
-    margin: 70px auto;
+    margin-bottom: 70px;
     font-size: 16px;
     line-height: 20px;
     text-align: center;
     color: $b;
+    background-color: $w;
     border: 3px solid $gold1;
     border-radius: 10px;
 

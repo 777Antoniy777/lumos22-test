@@ -1,5 +1,4 @@
 "use strict";
-
 var gulp = require("gulp");
 var posthtml = require("gulp-posthtml");
 var fileinclude = require('gulp-file-include');
@@ -9,8 +8,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var cssmin = require("gulp-csso");
 var rename = require("gulp-rename");
-// var image = require("gulp-image");
-var webp = require("gulp-webp");
+var image = require("gulp-image");
 var objectfit = require(`postcss-object-fit-images`);
 var webpack = require('webpack-stream');
 var svgsprite = require('gulp-svg-sprite');
@@ -39,31 +37,27 @@ gulp.task("css", function () {
 // js
 gulp.task("js", function () {
   return gulp.src("src/js/**/*.js")
-    // .pipe(sourcemaps.init())
     .pipe(webpack())
     .pipe(rename("all.js"))
-    // .pipe(sourcemaps.init({loadMaps: true}))
-    // .pipe(through.obj(function (file, enc, cb) {
-    //   // Dont pipe through any source map files as it will be handled
-    //   // by gulp-sourcemaps
-    //   const isSourceMap = /\.map$/.test(file.path);
-    //   if (!isSourceMap) this.push(file);
-    //   cb();
-    // }))
-    // .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
 });
 
 // img (jpg, png, svg)
 gulp.task("images", function() {
-  return gulp.src("src/img/*.{png,jpg,svg}")
+  return gulp.src([
+    "src/img/**/*.{png,jpg,svg}", 
+    "!src/img/icons-sprite/*.svg"])
     .pipe(image({
       pngquant: true,
       optipng: false,
       zopflipng: false,
       jpegRecompress: false,
-      mozjpeg: ["-optimize", "-progressive", "-quality N[75]"],
+      mozjpeg: {
+        progressive: true,
+        optimize: true,
+        quality: 95
+      },
       guetzli: false,
       gifsicle: false,
       svgo: true,
@@ -71,14 +65,6 @@ gulp.task("images", function() {
       quiet: true
     }))
     .pipe(gulp.dest("build/img/"));
-});
-
-gulp.task("webp", function() {
-  return gulp.src("src/img/*.{png,jpg}")
-    .pipe(webp({
-      quality: 80
-    }))
-    .pipe(gulp.dest("build/img"));
 });
 
 // svg sprite
@@ -115,7 +101,9 @@ gulp.task("server", function() {
   });
 
   // watchers
-  gulp.watch("src/img/**/*.{png,jpg,webp}", gulp.series("copy")).on("change", server.reload);
+  gulp.watch("src/img/**/*.{png,jpg,svg}", {
+    ignored: "src/img/icons-sprite/*.svg"
+  }, gulp.series("images")).on("change", server.reload);
   gulp.watch("src/img/icons-sprite/*.svg", gulp.series("sprite", "reload"));
   gulp.watch("src/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("src/js/*/**.js", gulp.series("js"));
@@ -129,9 +117,7 @@ gulp.task("reload", function(done) {
 
 gulp.task("copy", function() {
   return gulp.src([
-    "src/fonts/**/*.{woff,woff2}",
-    "src/img/**/*.{png,jpg,webp}",
-    "src/img/svg/*.svg"
+    "src/fonts/**/*.{woff,woff2}"
   ], {
     base: "src"
   })
@@ -142,15 +128,11 @@ gulp.task("clean", function() {
   return del("build");
 });
 
-gulp.task("imagemin", gulp.series(
-  "webp",
-  "images"
-));
-
 gulp.task("build", gulp.series(
   "clean",
   "js",
   "sprite",
+  "images",
   "css",
   "copy",
   "html"

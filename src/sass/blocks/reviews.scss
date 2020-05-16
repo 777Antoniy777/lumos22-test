@@ -1,15 +1,19 @@
 .reviews {
-  padding-top: 60px;
+  margin-top: -85px;
+  padding-top: 102px;
   padding-bottom: 125px;
   font-size: 14px;
   line-height: 18px;
+  background-color: $pink2;
 
   @media (min-width: $media-dt) {
+    padding-top: 102px;
     font-size: 16px;
     line-height: 19px;
   }
 
   &__title {
+    padding-bottom: 50px;
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
@@ -22,22 +26,22 @@
     }
   }
 
-  &__wrapper {
+  &__slider-wrapper {
     position: relative;
-    width: 946px;
     margin: 0 auto 60px;
-    padding: 30px 0;
+    padding: 25px 0 6px;
     background: $w;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
 
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      right: 28px;
+      top: 10px;
+      right: 16px;
+      z-index: 10;
       width: 40px;
       height: 40px;
-      background-image: url("../img/sprite/sprite.svg#quotations");
+      background-image: url("../img/svg/quotations.svg");
       background-size: 32px 32px;
       background-position: 50% 50%;
       background-repeat: no-repeat;
@@ -66,6 +70,7 @@
   }
 
   &__user-inner-wrapper {
+    padding-top: 6px;
     font-weight: 700;
 
     span {
@@ -95,10 +100,11 @@
 
   &__user-image {
     margin-right: 20px;
+    object-fit: contain;
   }
 
   &__description-wrapper {
-    padding: 30px 30px 0;
+    padding: 30px 26px 0;
 
     p {
       padding-bottom: 20px;
@@ -106,7 +112,7 @@
 
     span {
       font-weight: 700;
-      color: $violet1;
+      color: $violet3;
     }
   }
 
@@ -114,7 +120,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 361px;
     min-height: 60px;
     margin: 0 auto;
     padding: 5px 10px;
@@ -126,4 +131,36 @@
     background-color: $red1;
     border-radius: 35px;
   }
+}
+
+// IE fixed styles
+_:-ms-fullscreen, :root .reviews__user-image {
+  min-width: 58px;
+  height: 55px;
+}
+
+_:-ms-input-placeholder, :root .reviews__link {
+  padding-top: 20px;
+}
+
+_:-ms-fullscreen, :root .reviews {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (min-width: 0) {
+  _:-ms-fullscreen, :root .reviews__slider-wrapper {
+    margin-right: auto;
+    margin-left: -10px;
+    overflow: hidden;
+  }
+}
+
+_:-ms-fullscreen, :root .reviews__slider {
+  display: flex;
+  width: 800%;
+}
+
+_:-ms-fullscreen, :root .reviews__wrapper {
+  width: 100%;
 }
